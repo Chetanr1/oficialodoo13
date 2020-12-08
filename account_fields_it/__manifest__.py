@@ -8,7 +8,7 @@
 	'description':"""
 	Modificacion del modelo account.account
 	Modificacion del modelo account.analytic
-	Modificacion del modelo res.partner
+	Modificacion del modelo res.partner 
 	""",
 	'auto_install': False,
 	'demo': [],
