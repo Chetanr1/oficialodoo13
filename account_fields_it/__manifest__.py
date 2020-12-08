@@ -3,7 +3,7 @@
 	'name': 'Account Fields IT',
 	'category': 'account',
 	'author': 'ITGRUPO',
-	'depends': ['account','analytic','base','account_base_it','account_batch_payment','product'],
+	'depends': ['account','analytic','base','account_base_it','account_batch_payment','product','stock'],
 	'version': '1.0',
 	'description':"""
 	Modificacion del modelo account.account
