@@ -339,7 +339,7 @@ class ProductImport(models.TransientModel):
 								  'sale_ok': sale_ok,
 								  'purchase_ok': purchase_ok,
 								  'company_id': self.env.company.id if company_id else None,
-								  'onu_code': values.get('onu_code'),
+								  'onu_code': str(values.get('onu_code') if values.get('onu_code') else '' ),
 								  }
 		res = product_obj.create(vals)
 		return res
