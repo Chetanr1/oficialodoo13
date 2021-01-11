@@ -145,7 +145,7 @@ class ProductImport(models.TransientModel):
 								'sale_ok': line[13],
 								'purchase_ok': line[14],
 								'is_company': line[15],
-								'onu_code': line[16],
+								'onu_code': str(line[16]) if line[16] else '',
 								})
 					res = self.product_create(values)
 				else:
