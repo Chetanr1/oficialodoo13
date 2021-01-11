@@ -145,7 +145,7 @@ class ProductImport(models.TransientModel):
 								'sale_ok': line[13],
 								'purchase_ok': line[14],
 								'is_company': line[15],
-								'onu_code':  self.env['einvoice.catalog.25'].search([('code','=',line[16])])[0].id line[16] if line[16] else False,
+								'onu_code':  self.env['einvoice.catalog.25'].search([('code','=',line[16])])[0].id if line[16] else False,
 								})
 					res = self.product_create(values)
 				else:
