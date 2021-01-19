@@ -327,6 +327,7 @@ class ProductImport(models.TransientModel):
 								  'default_code':values.get('default_code'),
 								  'categ_id':categ_id.id,
 								  'type':type,
+								  'tracking':'serial' if type == 'product' else 'none',
 								  'barcode':barcode,
 								  'uom_id':uom_id,
 								  'uom_po_id':uom_po_id,
