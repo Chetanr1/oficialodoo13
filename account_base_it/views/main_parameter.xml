@@ -17,6 +17,7 @@
 									<field name="surrender_fc"/>
 									<field name="supplier_advance_account_nc"/>
 									<field name="supplier_advance_account_fc"/>
+									<field name="free_transer_account_id"/>
 								</group>
 								<group>
 									<field name="customer_advance_account_nc"/>
@@ -31,6 +32,8 @@
 								<group>
 									<field name="surrender_journal_nc"/>
 									<field name="surrender_journal_fc"/>
+									<field name="free_transfer_journal_id"/>
+									<field name="miscellaneous_journal"/>
 								</group>
 								<group>
 									<field name="destination_journal"/>
@@ -49,6 +52,11 @@
 								</group>
 								<group>
 									<field name="td_recibos_hon"/>
+								</group>
+							</group>
+							<group string="Impuestos para Asistentes">
+								<group>
+									<field name="free_transer_tax_ids" widget="many2many_tags"/>
 								</group>
 							</group>
 						</page>

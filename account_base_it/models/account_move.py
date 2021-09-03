@@ -26,8 +26,8 @@ class AccountMove(models.Model):
 									('2',u'Documento anulado'),
 									('8',u'Corresponde a un periodo anterior'),
 									('9',u'Se esta corrigiendo una notacion del periodo anterior')
-									],string='Estado PLE',default='1')
-	date_modify_sale = fields.Date(string='Fecha Modificacion PLE')
+									],string='Estado PLE Venta',default='1')
+	date_modify_sale = fields.Date(string='Fecha Modificacion PLE Venta')
 
 	#PURCHASES
 	campo_09_purchase = fields.Char(string='Numero Inicial Consolidado',size=20)
@@ -51,8 +51,8 @@ class AccountMove(models.Model):
 									('6',u'FECHA DE EMISION ES ANTERIOR AL PERIODO DE ANOTACION, DENTRO DE LOS 12 MESES'),
 									('7',u'FECHA DE EMISION ES ANTERIOR AL PERIODO DE ANOTACION, LUEGO DE LOS 12 MESES'),
 									('9',u'ES AJUSTE O RECTIFICACION')
-									],string='Estado PLE',default='1')
-	date_modify_purchase = fields.Date(string='Fecha Correccion PLE')
+									],string='Estado PLE Compra',default='1')
+	date_modify_purchase = fields.Date(string='Fecha Modificacion PLE Compra')
 
 	#PLE NO DOMICILIADOS
 	campo_26_purchase_nd = fields.Float(string='Renta Bruta',digits=(12, 2)) # It can't be negative

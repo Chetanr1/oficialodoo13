@@ -14,6 +14,7 @@
 							<field name="doc_origin_customer_check"/>
 							<field name="invoice_origin_check"/>
 							<field name="comment_add_check"/>
+							<field name="required_onu"/>
 							<field name="bank_numbers"/>
 						</group>
 						<group>
@@ -22,6 +23,11 @@
 							<field name="billing_type"/>
 							<field name="catalog_51_detraction_ids" widget="many2many_tags"/>
 							<field name="catalog_51_advance_ids" widget="many2many_tags"/>
+							<field name="rounded_ebill_line"/>
+							<field name="rounded_ebill"/>
+							<field name="rounded_show_invoice"/>
+							<field name="verify_amount_odoo"/>
+							<field name="send_multi_credits"/>
 						</group>
 					</group>
 					<notebook>

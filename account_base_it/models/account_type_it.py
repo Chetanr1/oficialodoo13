@@ -49,5 +49,6 @@ class AccountTypeIt(models.Model):
 	def name_get(self):
 		result = []
 		for einv in self:
-			result.append([einv.id,einv.name])
+			name = einv.code + ' ' + einv.name
+			result.append((einv.id, name))
 		return result

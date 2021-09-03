@@ -17,6 +17,7 @@
 							<field name="global_discount"/>
 							<field name="total_discount"/>
 							<field name="total_advance"/>
+							<field name="save_changes"/>
 						</group>
 						<group>
 							<field name="total_igv"/>

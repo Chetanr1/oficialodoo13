@@ -13,6 +13,7 @@ class EinvoiceCatalogPayment(models.Model):
 	name = fields.Char(compute=_get_name,store=True)
 	code = fields.Char(string='Codigo')
 	description = fields.Char(string='Descripcion')
+	pse_code = fields.Char(string='Codigo de Facturador', size=5)
 
 	@api.model
 	def name_search(self, name, args=None, operator='ilike', limit=100):

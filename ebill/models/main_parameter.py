@@ -5,7 +5,6 @@ BILLING_TYPE = [('0','Nubefact'),('1','Odoo Facturacion')]
 
 class MainParameter(models.Model):
 	_inherit = 'main.parameter'
-
 	advance_product_ids = fields.One2many('advance.product.line','main_parameter_id')
 	resolution = fields.Char(string=u'Resolución')
 	web_query = fields.Char(string='Web Consulta')
@@ -19,6 +18,13 @@ class MainParameter(models.Model):
 	catalog_51_advance_ids = fields.Many2many('einvoice.catalog.51', 'catalog_51_advance_parameter_rel', string='Tipos de Operacion Sujetos a Anticipos')
 	comment_add_check = fields.Boolean(string='Agregar comentario de factura a envio CPE', default=True)
 	bank_numbers = fields.Text(string='Cuentas de banco')
+	required_onu = fields.Boolean(string='ONU Obligatorio', default=True)
+	rounded_ebill_line = fields.Integer(default=10)
+	rounded_ebill = fields.Integer(default=10)
+	rounded_show_invoice = fields.Integer(default=2,string="Redondear en Factura")
+	send_multi_credits = fields.Boolean(default=False)
+	verify_amount_odoo = fields.Boolean(default=True)
+
 
 class SerialNubefactLine(models.Model):
 	_name = 'serial.nubefact.line'

@@ -8,23 +8,27 @@
 				<sheet>
 					<group>
 						<group>
-							<field name="code"/>
-							<field name="uom"/>
+							<field name="code" readonly="1"/>
+							<field name="uom" readonly="1"/>
 							<field name="unit_value"/>
 							<field name="unit_price"/>
 							<field name="discount_value"/>
-							<field name="percentage_discount"/>
-							<field name="sunat_product_code"/>
-							<field name="igv_type"/>
+							<field name="percentage_discount" readonly="1"/>
+							<field name="sunat_product_code" readonly="1"/>
+							<field name="igv_type" readonly="1"/>
+							<field name="save_changes"/>
 						</group>
 						<group>
+							<field name="subtotal_origin" readonly="1" />
 							<field name="subtotal"/>
+							<field name="igv_origin" readonly="1" />
 							<field name="igv"/>
 							<field name="icbper"/>
+							<field name="total_origin" readonly="1"/>
 							<field name="total"/>
-							<field name="advance_regularization"/>
-							<field name="advance_document_serie"/>
-							<field name="advance_document_number"/>
+							<field name="advance_regularization" readonly="1"/>
+							<field name="advance_document_serie" readonly="1"/>
+							<field name="advance_document_number" readonly="1"/>
 						</group>
 					</group>
 				</sheet>

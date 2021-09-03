@@ -27,6 +27,7 @@ class MainParameter(models.Model):
 	customer_account_detractions = fields.Many2one('account.account',string=u'Cuenta Detracciones Clientes')
 	profit_account_ed = fields.Many2one('account.account',string=u'Cuenta de Ganancias Diferencia de Cambio')
 	loss_account_ed = fields.Many2one('account.account',string=u'Cuenta de Perdidas Diferencia de Cambio')
+	free_transer_account_id = fields.Many2one('account.account',string=u'Cuenta de Transferencias Gratuitas')
 
 	####DIARIOS PARA ASISTENTES####
 
@@ -35,6 +36,7 @@ class MainParameter(models.Model):
 	destination_journal = fields.Many2one('account.journal',string=u'Diario Asientos Automaticos')
 	detraction_journal = fields.Many2one('account.journal',string=u'Diario Detracciones')
 	credit_journal = fields.Many2one('account.journal',string=u'Diario de Aplicaciones de Notas de Credito')
+	miscellaneous_journal = fields.Many2one('account.journal',string=u'Diario Misceláneo')
 
 	####SECUENCIAS PARA ASISTENTES####
 
@@ -47,6 +49,12 @@ class MainParameter(models.Model):
 	####RECIBO POR HONORARIOS####
 
 	td_recibos_hon = fields.Many2one('einvoice.catalog.01',string=u'Tipo de Documento Recibo de Honorarios Predeterminado')
+
+	####TRANSFERENCIAS GRATUITAS####
+
+	free_transer_tax = fields.Many2one('account.tax',string=u'Impuesto Transf. Gratuita')
+	free_transer_tax_ids = fields.Many2many('account.tax','free_transer_tax_main_parameter_rel','main_parameter_id','free_transer_tax_id',string=u'Impuestos Transf. Gratuita')
+	free_transfer_journal_id = fields.Many2one('account.journal',string=u'Diario Transf. Gratuita')
 
 	####LEASING####
 
