@@ -23,9 +23,36 @@
 					</header>
 				</xpath>
 				<field name="lang" position="after">
-					<field name="ruc_state" readonly="1"/>
-					<field name="ruc_condition" readonly="1"/>
+
 				</field>
+				<xpath expr="//page[@name='sales_purchases']" position="before">
+					<page name="con_sunat" string="Consulta Sunat">
+                            <group>
+                                <group  >
+                                    <field name="ruc_state" readonly="1"/>
+					                <field name="ruc_condition" readonly="1"/>
+									<field name="n2_dir_fiscal" invisible="1"/>
+									<field name="n2_nom_comer" readonly="1"/>
+									<field name="n2_sis_contab" readonly="1"/>
+									<field name="n2_see" readonly="1"/>
+									<field name="is_partner_retencion" />
+                                </group>
+                                <group >
+                                    <field name="n2_actv_econ" readonly="1"/>
+									<field name="n2_actv_econ_1" readonly="1"/>
+									<field name="n2_actv_econ_2" readonly="1" />
+									<field name="n2_actv_econ_3" readonly="1" />
+					                <field name="n2_init_actv" readonly="1"  />
+									<field name="n2_act_com_ext" readonly="1" invisible="1"  />
+									<field name="n2_afi_ple" readonly="1"/>
+									<field name="n2_cp_auto" readonly="1" invisible="1" />
+									<field name="n2_padrones" readonly="1"  />
+									<field name="n2_tipo_contr" readonly="1"/>
+
+                                </group>
+                            </group>
+					</page>
+				</xpath>
 			</field>
 		</record>
 		<record id="multiple_verify_ruc" model="ir.actions.server">
