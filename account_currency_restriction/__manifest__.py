@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 {
-	'name': 'Automatic Series Update',
+	'name': 'Account Currency Restriction',
 	'category': 'account',
 	'author': 'ITGRUPO',
 	'depends': ['account_fields_it'],
 	'version': '1.0',
 	'description':"""
-	Automatizacion de Referencias en Base a la Serie
+	Restriccion para facturas con moneda distinta de PEN para verificar la moneda de las cuentas de los apuntes contables
 	""",
 	'auto_install': False,
 	'demo': [],
